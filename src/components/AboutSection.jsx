@@ -33,8 +33,9 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="Dachez Lucas.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                download="Dachez Lucas.pdf"
               >
                 Télécharger le CV
               </a>
@@ -76,10 +77,9 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">Gestion de projet</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    durant mes experence passé j'ai pu developper ma capacité a gérer des taches dans un temps donner pour realisé un projet
                   </p>
                 </div>
               </div>
