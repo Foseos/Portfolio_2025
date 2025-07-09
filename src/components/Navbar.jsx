@@ -3,14 +3,12 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
-    {name: "Home", href: "#hero"},
+    {name: "Accueil", href: "#hero"},
     {name: "A propos", href: "#about"},
     {name: "Compétences", href: "#skills"},
     {name: "Projets", href: "#projects"},
     {name: "Contacts", href: "#contact"},
 ];
-
-
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +35,7 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> PedroTech </span>{" "}
+            <span className="text-glow text-foreground"> Lucas Dachez </span>{" "}
             Portfolio
           </span>
         </a>
