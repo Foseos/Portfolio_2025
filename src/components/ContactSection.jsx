@@ -85,14 +85,7 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Réseaux sociaux</h4>
-              <div className="flex space-x-4 justify-center">
-                <a href="https://fr.linkedin.com/in/lucas-dachez-467244243" target="_blank">
-                  <Linkedin />
-                </a>
-              </div>
-            </div>
+            
           </div>
 
           <div
