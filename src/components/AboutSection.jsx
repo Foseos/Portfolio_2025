@@ -12,29 +12,52 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-                Développeur Web
+                Développeur Web Full Stack
             </h3>
 
             <p className="text-muted-foreground">
               Diplômé d'un BTS SIO spécialité SLAM en 2023, je possède de solides compétences en développement web et cybersécurité.
             </p>
 
-            <p className="text-muted-foreground">
-              Passionné par la résolution de problèmes complexes, je me distingue par mon professionnalisme et ma détermination à mener à bien les missions qui me sont confiées.
-            </p>
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-lg font-semibold text-primary mb-2">Ma motivation</h4>
+                <p className="text-muted-foreground">
+                  Passionné par les nouvelles technologies et l'innovation, je suis constamment en quête d'apprentissage. Chaque projet est pour moi une opportunité de repousser mes limites et de créer des solutions qui ont un impact réel.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                {" "}
-                Contact
+              <div>
+                <h4 className="text-lg font-semibold text-primary mb-2">Pourquoi me choisir ?</h4>
+                <p className="text-muted-foreground">
+                  Ma polyvalence technique, ma curiosité naturelle et ma capacité d'adaptation me permettent de m'intégrer rapidement dans tout environnement. Je ne me contente pas de coder : je cherche à comprendre les enjeux métier pour proposer les meilleures solutions.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
+              <a
+                href="Dachez Lucas.pdf"
+                className="cosmic-button flex items-center justify-center gap-2"
+                download="Dachez Lucas.pdf"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Télécharger mon CV
               </a>
 
               <a
-                href="Dachez Lucas.pdf"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-                download="Dachez Lucas.pdf"
+                href="#contact"
+                className="cosmic-button flex items-center justify-center gap-2"
               >
-                Télécharger le CV
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"></path>
+                  <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"></path>
+                </svg>
+                Me contacter
               </a>
             </div>
           </div>
