@@ -4,6 +4,7 @@ const experiences = [
     title: "Manutentionnaire",
     company: "Ligier",
     period: "Septembre 2025 - Novembre 2025",
+    contractType: "Interim",
     description: "Gestion logistique, nettoyage et manutention de marchandises et colis",
     image: "/experience/Ligier.jpg",
     technologies: []
@@ -13,6 +14,7 @@ const experiences = [
     title: "Agent logistique",
     company: "Manpower",
     period: "Août 2024",
+    contractType: "Intérim",
     description: "Gestion et tri des déchets dans le respect des normes environnementales",
     image: "/experience/Manpower.jpg",
     technologies: []
@@ -22,6 +24,7 @@ const experiences = [
     title: "Trieur de colis",
     company: "LaPoste",
     period: "Novembre 2024 - Décembre 2024",
+    contractType: "CDD",
     description: "Tri et dispatching des colis dans le respect des délais de livraison",
     image: "/experience/LaPoste.svg",
     technologies: []
@@ -31,6 +34,7 @@ const experiences = [
     title: "Service Civique",
     company: "France Travail",
     period: "Février 2024 - Octobre 2024",
+    contractType: "Service Civique",
     description: "Accompagnement des demandeurs d'emploi dans l'utilisation des outils numériques",
     image: "/experience/France_Travail.jpg",
     technologies: []
@@ -40,6 +44,7 @@ const experiences = [
     title: "Développeur web stagiaire",
     company: "Pecheur.com",
     period: "Janvier 2023 - Février 2023",
+    contractType: "Stage",
     description: "Migration d'une application client lourd vers une architecture web moderne",
     image: "/experience/Pecheur.png",
     technologies: [ "C#", "HTML", "CSS", "JS", "ASP.net", "SQL"]
@@ -49,6 +54,7 @@ const experiences = [
     title: "Développeur web stagiaire",
     company: "Axereal",
     period: "Mai 2022 - Juin 2022",
+    contractType: "Stage",
     description: "Développement d'un script automatisé de vérification et validation des sauvegardes",
     image: "/experience/Axereal.jpg",
     technologies: [ "Bash", "Python", "SQL"]
@@ -109,7 +115,12 @@ export const ExperienceSection = () => {
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1 text-center">{exp.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-center">{exp.title}</h3>
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="px-4 py-1.5 text-sm font-bold rounded-full bg-primary text-primary-foreground shadow-md">
+                    {exp.contractType}
+                  </span>
+                </div>
                 <p className="text-primary font-medium text-sm mb-2 text-center">{exp.company}</p>
                 <p className="text-muted-foreground text-sm mb-4 text-center flex-grow">
                   {exp.description}
