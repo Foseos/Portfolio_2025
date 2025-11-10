@@ -2,32 +2,24 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
-  { name: "HTML/CSS", category: "frontend" },
-  { name: "React",  category: "frontend" },
-
-
-  // Backend
-  { name: "Node.js", category: "backend" },
-  { name: "PostgreSQL", category: "backend" },
-  { name: "C#", category: "backend" },
-
-
-  // Tools
-  { name: "Git/GitHub",  category: "Outils" },
-  { name: "Docker", category: "Outils" },
+  // Savoir faire
+  { name: "HTML/CSS", category: "Savoir faire" },
+  { name: "React",  category: "Savoir faire" },
+  { name: "Node.js", category: "Savoir faire" },
+  { name: "PostgreSQL", category: "Savoir faire" },
+  { name: "C#", category: "Savoir faire" },
+  { name: "Git/GitHub",  category: "Savoir faire" },
+  { name: "Docker", category: "Savoir faire" },
 
   // Savoir être
   { name: "Esprit d'équipe",  category: "Savoir être" },
   { name: "Ecoute",  category: "Savoir être" },
-  { name: " Curiosité",  category: "Savoir être" },
-  { name: " Rigueur",  category: "Savoir être" },
+  { name: "Curiosité",  category: "Savoir être" },
+  { name: "Rigueur",  category: "Savoir être" },
   { name: "Communication",  category: "Savoir être" },
-
-
 ];
 
-const categories = ["all", "frontend", "backend", "Outils", "Savoir être"];
+const categories = ["all", "Savoir faire", "Savoir être"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -51,7 +43,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
               {category}

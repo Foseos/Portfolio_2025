@@ -11,14 +11,20 @@ export const StarBackground = () => {
     generateStars();
     generateMeteors();
 
+    // Debounce resize event
+    let resizeTimeout;
     const handleResize = () => {
-      generateStars();
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(generateStars, 250);
     };
 
     // Pour la taille sur mobile
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimeout);
+    };
   }, []);
 
   const generateStars = () => {
