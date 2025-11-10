@@ -12,18 +12,15 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-                Web Developer
+                Développeur Web
             </h3>
 
             <p className="text-muted-foreground">
-              J'ai obtenu en 2023 mon BTS SIO spécialité SLAM, de plus 
-              j'ai des bonne connaissance en cybersécurité
+              Diplômé d'un BTS SIO spécialité SLAM en 2023, je possède de solides compétences en développement web et cybersécurité.
             </p>
 
             <p className="text-muted-foreground">
-              Passionné par la résolution de problème plus ou moins complexe,
-              je serai me montrer professionnel et déterminé a resoudres les
-              taches qui me seront confiées
+              Passionné par la résolution de problèmes complexes, je me distingue par mon professionnalisme et ma détermination à mener à bien les missions qui me sont confiées.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -49,9 +46,9 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">Développement Web</h4>
                   <p className="text-muted-foreground">
-                    création de site et applications web avec ou sans framework
+                    Création de sites et applications web modernes, avec ou sans frameworks
                   </p>
                 </div>
               </div>
@@ -64,8 +61,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Travail en équipe</h4>
                   <p className="text-muted-foreground">
-                    Avec mes expériences professionnel j'ai acquéris des compétences 
-                    de travail d'équipe et de communication
+                    Grâce à mes expériences professionnelles, j'ai développé de solides compétences en travail d'équipe et en communication
                   </p>
                 </div>
               </div>
@@ -79,7 +75,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Gestion de projet</h4>
                   <p className="text-muted-foreground">
-                    durant mes experence passé j'ai pu developper ma capacité a gérer des taches dans un temps donner pour realisé un projet
+                    Au cours de mes expériences, j'ai développé ma capacité à gérer des tâches dans des délais définis pour mener à bien les projets
                   </p>
                 </div>
               </div>

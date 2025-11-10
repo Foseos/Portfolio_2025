@@ -20,13 +20,13 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Je réalise des projets qui me passionne comme tous ce qui est web, automatisation, cybersécurité et IA
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+            Développeur web passionné par la création de solutions innovantes en développement web, automatisation, cybersécurité et intelligence artificielle
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              Voir mes Projets
+              Découvrir mes projets
             </a>
           </div>
         </div>

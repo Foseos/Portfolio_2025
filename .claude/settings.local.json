@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(dir \"c:\\Users\\fosoy\\Desktop\\Projets\\Portfolio\\public\" /b)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

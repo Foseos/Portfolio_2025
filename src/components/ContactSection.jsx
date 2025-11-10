@@ -23,7 +23,7 @@ export const ContactSection = () => {
     setSuccessMessage(""); // reset message
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "46c56c08-e650-4df6-b36f-bb1014ae39e8");
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
