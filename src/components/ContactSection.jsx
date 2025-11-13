@@ -29,14 +29,16 @@ export const ContactSection = () => {
     const json = JSON.stringify(object);
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: json,
-      }).then((res) => res.json());
+      });
+
+      const res = await response.json();
 
       if (res.success) {
         toast({
@@ -128,6 +130,10 @@ export const ContactSection = () => {
             <h3 className="text-2xl font-semibold mb-6">Envoyer un message</h3>
 
             <form className="space-y-6" onSubmit={onSubmit}>
+              <input type="hidden" name="redirect" value="false" />
+              <input type="hidden" name="subject" value="Nouveau message depuis le portfolio" />
+              <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Nom
