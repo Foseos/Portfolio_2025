@@ -5,7 +5,8 @@
       "Bash(tree:*)",
       "Bash(npm run dev:*)",
       "Bash(curl:*)",
-      "Bash(dir \"c:\\Users\\fosoy\\Desktop\\Projets\\Portfolio\\public\" /b)"
+      "Bash(dir \"c:\\Users\\fosoy\\Desktop\\Projets\\Portfolio\\public\" /b)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
