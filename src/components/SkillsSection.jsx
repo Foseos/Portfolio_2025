@@ -6,7 +6,6 @@ const skills = [
   // Savoir faire
   { name: "HTML/CSS", category: "Savoir faire" },
   { name: "React",  category: "Savoir faire" },
-  { name: "Node.js", category: "Savoir faire" },
   { name: "PostgreSQL", category: "Savoir faire" },
   { name: "C#", category: "Savoir faire" },
   { name: "Git/GitHub",  category: "Savoir faire" },
