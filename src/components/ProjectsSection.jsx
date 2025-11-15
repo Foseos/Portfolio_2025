@@ -22,7 +22,30 @@ const projects = [
 
     ]
   },
-  
+  {
+    id: 2,
+    title: "Centre Hospitalier George Sand",
+    description: "Refonte complète du site institutionnel avec Symfony",
+    image: "/projects/project2.png",
+    tags: ["Symfony", "PHP", "Twig", "Bootstrap", "Doctrine"],
+    demoUrl: "https://chgs-production.up.railway.app",
+    githubUrl: "",
+    detailedDescription: "Refonte complète du site web institutionnel du Centre Hospitalier George Sand, établissement public spécialisé en santé mentale basé à Bourges. Projet personnel réalisé pour découvrir et maîtriser PHP et Symfony dans le cadre d'une candidature spontanée. Le site propose une interface moderne et accessible pour informer patients et familles sur les services de soins psychiatriques.",
+    features: [
+      "Développement complet avec Symfony pour l'apprentissage de PHP",
+      "Espace d'administration pour gérer les offres d'emploi et les activités",
+      "Système de candidature en ligne pour les offres d'emploi",
+      "Annuaire médical avec répertoire des professionnels de santé",
+      "Présentation détaillée des services de soins (psychiatrie adulte et pédopsychiatrie)",
+      "Système de gestion des actualités avec carrousel automatisé",
+      "Informations pratiques sur l'hospitalisation et les droits des patients",
+      "Interface responsive optimisée pour tous les supports",
+      "Intégration des réseaux sociaux et contact d'urgence direct"
+    ],
+    detailedImages: [
+
+    ]
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -55,10 +78,10 @@ export const ProjectsSection = () => {
           {currentProjects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer flex flex-col"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden flex-shrink-0">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -66,8 +89,8 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="p-6 flex flex-col items-center text-center flex-grow">
+                <div className="flex flex-wrap gap-2 mb-4 justify-center min-h-[32px]">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -78,11 +101,11 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 min-h-[56px] flex items-center justify-center">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-center items-center w-full">
                   <div className="flex space-x-3">
                     <a
                       href={project.demoUrl}
@@ -166,42 +189,54 @@ export const ProjectsSection = () => {
           title={selectedProject.title}
         >
           <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {selectedProject.detailedImages?.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`${selectedProject.title} - ${index + 1}`}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-              ))}
+            {/* Image principale */}
+            <div className="w-full">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full h-auto object-contain rounded-lg"
+              />
             </div>
 
-            <div>
+            {/* Images détaillées supplémentaires si disponibles */}
+            {selectedProject.detailedImages && selectedProject.detailedImages.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {selectedProject.detailedImages.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`${selectedProject.title} - ${index + 1}`}
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
+                ))}
+              </div>
+            )}
+
+            <div className="text-left">
               <h3 className="text-xl font-semibold mb-3">Description</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 {selectedProject.detailedDescription}
               </p>
             </div>
 
             {selectedProject.features && (
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold mb-3">Fonctionnalités</h3>
                 <ul className="space-y-2">
                   {selectedProject.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start space-x-2 text-muted-foreground"
+                      className="flex items-start space-x-3 text-muted-foreground"
                     >
-                      <span className="text-primary mt-1">•</span>
-                      <span>{feature}</span>
+                      <span className="text-primary mt-1 flex-shrink-0">•</span>
+                      <span className="text-left">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             )}
 
-            <div>
+            <div className="text-left">
               <h3 className="text-xl font-semibold mb-3">Technologies</h3>
               <div className="flex flex-wrap gap-2">
                 {selectedProject.tags.map((tag, index) => (
