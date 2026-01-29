@@ -28,7 +28,7 @@ const projects = [
     description: "Refonte complète du site institutionnel avec Symfony",
     image: "/projects/project2.png",
     tags: ["Symfony", "PHP", "Twig", "Bootstrap", "Doctrine"],
-    demoUrl: "https://chgs-production.up.railway.app",
+    demoUrl: "",
     githubUrl: "",
     detailedDescription: "Refonte complète du site web institutionnel du Centre Hospitalier George Sand, établissement public spécialisé en santé mentale basé à Bourges. Projet personnel réalisé pour découvrir et maîtriser PHP et Symfony dans le cadre d'une candidature spontanée. Le site propose une interface moderne et accessible pour informer patients et familles sur les services de soins psychiatriques.",
     features: [
@@ -45,6 +45,29 @@ const projects = [
     detailedImages: [
 
     ]
+  },
+  {
+    id: 3,
+    title: "Job Scraper",
+    description: "Agrégateur d'offres d'emploi avec scraping et interface de suivi",
+    image: "/projects/project3.png",
+    tags: ["Flask", "Python", "Selenium", "SQLite", "Celery", "Redis"],
+    demoUrl: "",
+    githubUrl: "https://github.com/Foseos/Web_Scrapper",
+    detailedDescription: "Agrégateur d'offres d'emploi françaises qui scrape les annonces depuis France Travail via Selenium, les stocke en base SQLite et propose une interface web complète pour rechercher, filtrer et suivre ses candidatures. L'application affiche les résultats en temps réel grâce au streaming SSE et offre des outils de suivi avancés : tableau Kanban, statistiques, carte interactive et dashboard personnalisable.",
+    features: [
+      "Scraping multi-villes avec rayon configurable via Selenium",
+      "Streaming temps réel des résultats via Server-Sent Events (SSE)",
+      "Filtres avancés par ville, métier, expérience, type de contrat et date",
+      "Catégorisation automatique des offres par métier et niveau d'expérience",
+      "Suivi des candidatures : favoris, postulé, notes personnelles",
+      "Tableau Kanban pour le suivi visuel de l'avancement",
+      "Statistiques et tendances de publication avec prédictions",
+      "Carte interactive des offres avec Leaflet.js",
+      "Dashboard personnalisable et thème sombre/clair",
+      "Déduplication et nettoyage automatique de la base de données pour les offres supérieur a 14 Jours"
+    ],
+    detailedImages: []
   },
 ];
 
@@ -107,22 +130,26 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-center items-center w-full">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
