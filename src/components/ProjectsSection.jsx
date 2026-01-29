@@ -67,7 +67,12 @@ const projects = [
       "Dashboard personnalisable et thème sombre/clair",
       "Déduplication et nettoyage automatique de la base de données pour les offres supérieur a 14 Jours"
     ],
-    detailedImages: ["/projects/Détails/project3_Détails1.png","/projects/Détails/project3_Détails2.png","/projects/Détails/project3_Détails3.png"]
+    detailedImages: 
+    [
+      "/projects/details/project3_details1.png",
+      "/projects/details/project3_details2.png",
+      "/projects/details/project3_details3.png"
+    ]
   },
 ];
 
