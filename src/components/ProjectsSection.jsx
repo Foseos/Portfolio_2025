@@ -51,7 +51,7 @@ const projects = [
     title: "Job Scraper",
     description: "Agrégateur d'offres d'emploi avec scraping et interface de suivi",
     image: "/projects/project3.png",
-    tags: ["Flask", "Python", "Selenium", "SQLite", "Celery", "Redis"],
+    tags: ["Flask", "Python", "Selenium", "SQLite"],
     demoUrl: "",
     githubUrl: "https://github.com/Foseos/Web_Scrapper",
     detailedDescription: "Agrégateur d'offres d'emploi françaises qui scrape les annonces depuis France Travail via Selenium, les stocke en base SQLite et propose une interface web complète pour rechercher, filtrer et suivre ses candidatures. L'application affiche les résultats en temps réel grâce au streaming SSE et offre des outils de suivi avancés : tableau Kanban, statistiques, carte interactive et dashboard personnalisable.",
@@ -67,12 +67,13 @@ const projects = [
       "Dashboard personnalisable et thème sombre/clair",
       "Déduplication et nettoyage automatique de la base de données pour les offres supérieur a 14 Jours"
     ],
-    detailedImages: []
+    detailedImages: ["/projects/Détails/project3_Détails1.png","/projects/Détails/project3_Détails2.png","/projects/Détails/project3_Détails3.png"]
   },
 ];
 
 export const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
   const totalPages = Math.ceil(projects.length / itemsPerPage);
@@ -102,7 +103,7 @@ export const ProjectsSection = () => {
             <div
               key={key}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover cursor-pointer flex flex-col"
-              onClick={() => setSelectedProject(project)}
+              onClick={() => { setSelectedProject(project); setCurrentImageIndex(0); }}
             >
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img
@@ -215,29 +216,59 @@ export const ProjectsSection = () => {
           onClose={() => setSelectedProject(null)}
           title={selectedProject.title}
         >
+          {(() => {
+            const allImages = [selectedProject.image, ...(selectedProject.detailedImages || [])];
+            return (
           <div className="space-y-6">
-            {/* Image principale */}
-            <div className="w-full">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full h-auto object-contain rounded-lg"
-              />
-            </div>
-
-            {/* Images détaillées supplémentaires si disponibles */}
-            {selectedProject.detailedImages && selectedProject.detailedImages.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {selectedProject.detailedImages.map((img, index) => (
-                  <img
-                    key={index}
-                    src={img}
-                    alt={`${selectedProject.title} - ${index + 1}`}
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
-                ))}
+            {/* Carrousel d'images */}
+            <div className="relative group/carousel">
+              <div className="overflow-hidden rounded-xl bg-black/5">
+                <img
+                  src={allImages[currentImageIndex]}
+                  alt={`${selectedProject.title} - ${currentImageIndex + 1}`}
+                  className="w-full h-96 object-contain transition-all duration-500"
+                />
               </div>
-            )}
+
+              {allImages.length > 1 && (
+                <>
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-lg opacity-0 group-hover/carousel:opacity-100 hover:bg-background transition-all duration-300"
+                    aria-label="Image précédente"
+                  >
+                    <ChevronLeft size={18} className="text-foreground" />
+                  </button>
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) => (prev + 1) % allImages.length)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-lg opacity-0 group-hover/carousel:opacity-100 hover:bg-background transition-all duration-300"
+                    aria-label="Image suivante"
+                  >
+                    <ChevronRight size={18} className="text-foreground" />
+                  </button>
+
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-3 px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-lg">
+                    <span className="text-xs text-muted-foreground font-medium">
+                      {currentImageIndex + 1} / {allImages.length}
+                    </span>
+                    <div className="flex gap-1.5">
+                      {allImages.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`rounded-full transition-all duration-300 ${
+                            index === currentImageIndex
+                              ? "bg-primary w-5 h-2"
+                              : "bg-muted-foreground/30 hover:bg-primary/50 w-2 h-2"
+                          }`}
+                          aria-label={`Image ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
 
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-3">Description</h3>
@@ -300,6 +331,8 @@ export const ProjectsSection = () => {
               )}
             </div>
           </div>
+            );
+          })()}
         </Modal>
       )}
     </section>
