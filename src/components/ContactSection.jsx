@@ -1,26 +1,18 @@
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Twitch,
-  Twitter,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "./hooks/use-toast";
 import { useState } from "react";
+import { CONTACT_INFO } from "@/data/config";
 
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState(""); // nouvel état
+  const [successMessage, setSuccessMessage] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    setSuccessMessage(""); // reset message
+    setSuccessMessage("");
 
     const formData = new FormData(event.target);
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
@@ -47,12 +39,11 @@ export const ContactSection = () => {
         });
 
         event.target.reset();
-        setSuccessMessage("Votre message a été envoyé avec succès !"); // message affiché
+        setSuccessMessage("Votre message a été envoyé avec succès !");
 
         setTimeout(() => {
           setSuccessMessage("");
         }, 1000);
-
       } else {
         toast({
           title: "Erreur",
@@ -63,7 +54,7 @@ export const ContactSection = () => {
     } catch (error) {
       toast({
         title: "Erreur",
-        description: "Impossible d’envoyer le message.",
+        description: "Impossible d'envoyer le message.",
         variant: "destructive",
       });
     } finally {
@@ -90,10 +81,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a
-                    href="mailto:dachez.lucas@gmail.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    dachez.lucas@gmail.com
+                    {CONTACT_INFO.email}
                   </a>
                 </div>
               </div>
@@ -105,10 +96,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Téléphone</h4>
                   <a
-                    href="tel:+33652609998"
+                    href={`tel:${CONTACT_INFO.phone}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +33 6 52 60 99 98
+                    {CONTACT_INFO.phoneDisplay}
                   </a>
                 </div>
               </div>
@@ -119,7 +110,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Localisation</h4>
-                  <span className="text-muted-foreground">Vichy, France</span>
+                  <span className="text-muted-foreground">{CONTACT_INFO.location}</span>
                 </div>
               </div>
             </div>
