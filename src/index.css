@@ -32,12 +32,14 @@
   @keyframes glow-pulse {
     0%,
     100% {
-      text-shadow: 0 0 10px rgba(167, 139, 250, 0.3),
+      text-shadow:
+        0 0 10px rgba(167, 139, 250, 0.3),
         0 0 20px rgba(167, 139, 250, 0.2),
         0 0 30px rgba(167, 139, 250, 0.1);
     }
     50% {
-      text-shadow: 0 0 20px rgba(167, 139, 250, 0.6),
+      text-shadow:
+        0 0 20px rgba(167, 139, 250, 0.6),
         0 0 30px rgba(167, 139, 250, 0.4),
         0 0 40px rgba(167, 139, 250, 0.2);
     }
@@ -92,22 +94,22 @@
 
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    --primary: 255 70% 60%;
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
   }
 
   .dark {
-    --background: 222 47% 4%;
+    --background: 240 10% 4%;
     --foreground: 213 31% 91%;
 
-    --card: 222 47% 8%;
+    --card: 240 10% 8%;
 
-    --primary: 250 65% 65%;
+    --primary: 255 80% 68%;
     --primary-foreground: 213 31% 91%;
 
-    --border: 217 33% 20%;
+    --border: 240 10% 15%;
   }
 
   * {
@@ -120,8 +122,28 @@
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Inter", sans-serif;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+@utility glass-panel {
+  @apply bg-card/60 backdrop-blur-xl border border-white/10;
+}
+
+@utility gradient-orb {
+  @apply absolute rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-pulse-subtle;
 }
 
 @utility container {
@@ -210,4 +232,37 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+@keyframes scaleInCenter {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@utility scale-in-center {
+  animation: scaleInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar for Modal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }

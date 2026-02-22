@@ -43,18 +43,30 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed z-50 p-2 rounded-full transition-colors duration-300 focus:outline-hidden",
-        "top-5 right-5",
-        "max-sm:top-auto max-sm:bottom-5 max-sm:right-5"
-    )}
-
+        "fixed bottom-6 right-6 p-4 rounded-full transition-all duration-500 z-50 overflow-hidden",
+        "bg-background/80 backdrop-blur-md border border-border shadow-lg hover:shadow-primary/20",
+        "hover:scale-110 active:scale-95 group"
+      )}
+      aria-label="Toggle theme"
     >
-        {/* si darkmode alors soleil sinon lune pour le bouton */}
-        {isDarkMode ? (
-            <Sun className="h-6 w-6 text-yellow-300"/>
-        ) : (
-            <Moon className="h-6 w-6 text-blue-900"/>
-        )}
+      <div className="relative w-6 h-6 flex items-center justify-center">
+        <Sun
+          className={cn(
+            "absolute w-6 h-6 text-yellow-500 transition-all duration-500",
+            isDarkMode
+              ? "opacity-0 -rotate-90 scale-50"
+              : "opacity-100 rotate-0 scale-100 group-hover:rotate-12"
+          )}
+        />
+        <Moon
+          className={cn(
+            "absolute w-6 h-6 text-indigo-400 transition-all duration-500",
+            !isDarkMode
+              ? "opacity-0 rotate-90 scale-50"
+              : "opacity-100 rotate-0 scale-100 group-hover:-rotate-12"
+          )}
+        />
+      </div>
     </button>
     );
 }

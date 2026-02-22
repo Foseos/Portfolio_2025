@@ -7,14 +7,15 @@ export const projects = [
     tags: ["React", "TailwindCSS"],
     demoUrl: "#",
     githubUrl: "https://github.com/Foseos/Portfolio_2025",
-    detailedDescription: "Portfolio moderne développé avec React et TailwindCSS, mettant en valeur mes compétences techniques, mes réalisations et mon parcours professionnel à travers une interface élégante et intuitive.",
+    detailedDescription:
+      "Portfolio moderne développé avec React et TailwindCSS, mettant en valeur mes compétences techniques, mes réalisations et mon parcours professionnel à travers une interface élégante et intuitive.",
     features: [
       "Design responsive et moderne adapté à tous les supports",
       "Animations fluides et expérience utilisateur optimisée",
       "Mode sombre/clair pour un confort visuel optimal",
-      "Formulaire de contact intégré et fonctionnel"
+      "Formulaire de contact intégré et fonctionnel",
     ],
-    detailedImages: []
+    detailedImages: [],
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ export const projects = [
     tags: ["Symfony", "PHP", "Twig", "Bootstrap", "Doctrine"],
     demoUrl: "",
     githubUrl: "",
-    detailedDescription: "Refonte complète du site web institutionnel du Centre Hospitalier George Sand, établissement public spécialisé en santé mentale basé à Bourges. Projet personnel réalisé pour découvrir et maîtriser PHP et Symfony dans le cadre d'une candidature spontanée. Le site propose une interface moderne et accessible pour informer patients et familles sur les services de soins psychiatriques.",
+    detailedDescription:
+      "Refonte complète du site web institutionnel du Centre Hospitalier George Sand, établissement public spécialisé en santé mentale basé à Bourges. Projet personnel réalisé pour découvrir et maîtriser PHP et Symfony dans le cadre d'une candidature spontanée. Le site propose une interface moderne et accessible pour informer patients et familles sur les services de soins psychiatriques.",
     features: [
       "Développement complet avec Symfony pour l'apprentissage de PHP",
       "Espace d'administration pour gérer les offres d'emploi et les activités",
@@ -34,19 +36,21 @@ export const projects = [
       "Système de gestion des actualités avec carrousel automatisé",
       "Informations pratiques sur l'hospitalisation et les droits des patients",
       "Interface responsive optimisée pour tous les supports",
-      "Intégration des réseaux sociaux et contact d'urgence direct"
+      "Intégration des réseaux sociaux et contact d'urgence direct",
     ],
-    detailedImages: []
+    detailedImages: [],
   },
   {
     id: 3,
     title: "Job Scraper",
-    description: "Agrégateur d'offres d'emploi avec scraping et interface de suivi",
+    description:
+      "Agrégateur d'offres d'emploi avec scraping et interface de suivi",
     image: "/projects/project3.png",
     tags: ["Flask", "Python", "Selenium", "SQLite"],
     demoUrl: "",
     githubUrl: "https://github.com/Foseos/Web_Scrapper",
-    detailedDescription: "Agrégateur d'offres d'emploi françaises qui scrape les annonces depuis France Travail via Selenium, les stocke en base SQLite et propose une interface web complète pour rechercher, filtrer et suivre ses candidatures. L'application affiche les résultats en temps réel grâce au streaming SSE et offre des outils de suivi avancés : tableau Kanban, statistiques, carte interactive et dashboard personnalisable.",
+    detailedDescription:
+      "Agrégateur d'offres d'emploi françaises qui scrape les annonces depuis France Travail via Selenium, les stocke en base SQLite et propose une interface web complète pour rechercher, filtrer et suivre ses candidatures. L'application affiche les résultats en temps réel grâce au streaming SSE et offre des outils de suivi avancés : tableau Kanban, statistiques, carte interactive et dashboard personnalisable.",
     features: [
       "Scraping multi-villes avec rayon configurable via Selenium",
       "Streaming temps réel des résultats via Server-Sent Events (SSE)",
@@ -57,12 +61,12 @@ export const projects = [
       "Statistiques et tendances de publication avec prédictions",
       "Carte interactive des offres avec Leaflet.js",
       "Dashboard personnalisable et thème sombre/clair",
-      "Déduplication et nettoyage automatique de la base de données pour les offres supérieur a 14 Jours"
+      "Déduplication et nettoyage automatique de la base de données pour les offres supérieures à 14 jours",
     ],
     detailedImages: [
       "/projects/details/project3_details1.png",
       "/projects/details/project3_details2.png",
-      "/projects/details/project3_details3.png"
-    ]
+      "/projects/details/project3_details3.png",
+    ],
   },
 ];

@@ -1,11 +1,17 @@
 import { ArrowDown } from "lucide-react";
+import { TextRotator } from "./TextRotator";
 
 export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+      className="relative min-h-[100dvh] flex flex-col items-center justify-center px-4 overflow-hidden"
     >
+      {/* Background Glow Orbs */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-primary/20 rounded-full blur-[100px] md:blur-[150px] pointer-events-none animate-pulse-subtle" />
+      <div className="absolute top-1/4 right-1/4 w-[200px] h-[200px] bg-purple-500/20 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-[250px] h-[250px] bg-blue-500/20 rounded-full blur-[100px] pointer-events-none" />
+
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -14,9 +20,12 @@ export const HeroSection = () => {
               {" "}
               collaboration
             </span>
-            <span className="opacity-0 animate-fade-in-delay-2">
-              {" "}
-              faisait la différence
+            <span className="opacity-0 animate-fade-in-delay-2 flex flex-col sm:flex-row items-center justify-center gap-2">
+              <span className="hidden sm:inline">{" "}</span>
+              <TextRotator 
+                texts={["faisait la différence", "créait de la valeur", "marquait les esprits"]} 
+                className="text-primary font-bold min-h-[1.2em] relative"
+              />
             </span>
           </h1>
 

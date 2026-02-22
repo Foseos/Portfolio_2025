@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home";
 import { NotFound } from "./pages/NotFound";
+import { Noise } from "./components/Noise";
 
 function App() {
   return (
     <>
+      <Noise />
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
