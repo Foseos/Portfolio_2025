@@ -1,8 +1,9 @@
 export const skills = [
   // Savoir faire
   { name: "HTML/CSS", category: "Savoir faire" },
-  { name: "React", category: "Savoir faire" },
+  { name: "Python", category: "Savoir faire" },
   { name: "PostgreSQL", category: "Savoir faire" },
+  { name: "SQL", category: "Savoir faire" },
   { name: "C#", category: "Savoir faire" },
   { name: "Git/GitHub", category: "Savoir faire" },
   { name: "Docker", category: "Savoir faire" },
