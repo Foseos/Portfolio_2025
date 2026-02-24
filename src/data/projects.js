@@ -69,4 +69,26 @@ export const projects = [
       "/projects/details/project3_details3.png",
     ],
   },
+  {
+    id: 4,
+    title: "Password_Manager",
+    description:
+      "Un gestionnaire de mots de passe de bureau sécurisé, moderne et entièrement hors-ligne, conçu avec Python.",
+    image: "/projects/project4.png",
+    tags: ["Tkinter", "Python", "Librairies de sécurité : cryptography, hashlib, secrets", "SQLite"],
+    demoUrl: "",
+    githubUrl: "https://github.com/Foseos/Password_Manager",
+    detailedDescription:
+      "Un gestionnaire de mots de passe de bureau sécurisé, moderne et entièrement hors-ligne, conçu avec Python. Ce projet a été développé avec une architecture logicielle stricte (MVC) et met en œuvre des standards de sécurité reconnus pour la protection des données sensibles.",
+    features: [
+      "Authentification sécurisée",
+      "Chiffrement robuste",
+      "Génération cryptographique",
+      " Architecture propre et maintenable",
+      "UI moderne",
+      "Gestion complète CRUD",
+      "Application 100% offline",
+    ],
+    detailedImages: [],
+  },
 ];
