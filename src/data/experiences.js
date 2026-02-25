@@ -13,7 +13,7 @@ export const experiences = [
     id: 2,
     title: "Agent logistique",
     company: "Manpower",
-    period: "juillet - Août 2025",
+    period: "juillet 2025 - spetembre 2025",
     contractType: "Intérim",
     description: "Gestion et tri des déchets dans le respect des normes environnementales",
     image: "/experience/Manpower.jpg",
@@ -21,6 +21,16 @@ export const experiences = [
   },
   {
     id: 3,
+    title: "Développeur",
+    company: "Manpower",
+    period: "Janvier 2025 - juillet 2025",
+    contractType: "Intérim",
+    description: "Ajout de fonctionalité au site web",
+    image: "/experience/Manpower.jpg",
+    technologies: ["Django", "SQL", "Python", "HTML", "CSS"]
+  },
+  {
+    id: 4,
     title: "Trieur de colis",
     company: "LaPoste",
     period: "Novembre 2024 - Janvier 2025",
@@ -30,7 +40,7 @@ export const experiences = [
     technologies: []
   },
   {
-    id: 4,
+    id: 5,
     title: "Service Civique",
     company: "France Travail",
     period: "Février 2024 - Octobre 2024",
@@ -40,7 +50,7 @@ export const experiences = [
     technologies: []
   },
   {
-    id: 5,
+    id: 6,
     title: "Développeur web stagiaire",
     company: "Pecheur.com",
     period: "Janvier 2023 - Mars 2023",
@@ -50,7 +60,7 @@ export const experiences = [
     technologies: ["C#", "HTML", "CSS", "JS", "ASP.net", "SQL"]
   },
   {
-    id: 6,
+    id: 7,
     title: "Développeur web stagiaire",
     company: "Axereal",
     period: "Mai 2022 - Juillet 2022",
