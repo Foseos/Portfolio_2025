@@ -13,8 +13,8 @@ const ExperienceSection = lazy(() => import("../components/ExperienceSection").t
 const ProjectsSection = lazy(() => import("../components/ProjectsSection").then(module => ({ default: module.ProjectsSection })));
 const ContactSection = lazy(() => import("../components/ContactSection").then(module => ({ default: module.ContactSection })));
 
-const SITE_URL = "https://lucasdachez.dev";
-const SITE_TITLE = "Lucas Dachez | Développeur Web";
+const SITE_URL = "https://www.portfoliodachez.fr";
+const SITE_TITLE = "Lucas Dachez | Portfolio";
 const SITE_DESCRIPTION = "Portfolio de Lucas Dachez, développeur web. Découvrez mes projets, mes compétences et mon expérience dans la création d'applications web modernes.";
 
 export const Home = () => {
