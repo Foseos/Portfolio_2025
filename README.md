@@ -1,17 +1,64 @@
-# React + Vite
+# Portfolio - Lucas Dachez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel de développeur web, construit avec React et Vite.
 
-Currently, two official plugins are available:
+**(https://www.portfoliodachez.fr)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack technique
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite 7**
+- **Tailwind CSS 4** (via le plugin Vite)
+- **Framer Motion** pour les animations
+- **React Router** pour le routing
+- **React Helmet Async** pour le SEO
+- **Lucide React** pour les icones
+- **Web3Forms** pour le formulaire de contact
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Fonctionnalites
 
-## Voir le projet
+- Design responsive (mobile, tablette, desktop)
+- Theme sombre / clair
+- Lazy loading des sections sous la ligne de flottaison
+- SEO (meta tags, Open Graph, JSON-LD)
+- Accessibilite (skip-to-content, semantique HTML)
+- Error boundary pour la gestion d'erreurs
+- Arriere-plan anime (etoiles)
 
-https://dachez-foseos-projects.vercel.app/
+## Installation
 
+```bash
+git clone https://github.com/Foseos/Portfolio_2025.git
+cd Portfolio_2025
+npm install
+```
+
+Creer un fichier `.env.local` :
+
+```
+VITE_WEB3FORMS_ACCESS_KEY=your_access_key
+```
+
+## Scripts
+
+```bash
+npm run dev       # Serveur de developpement
+npm run build     # Build de production
+npm run preview   # Preview du build
+npm run lint      # Linting ESLint
+```
+
+## Structure du projet
+
+```
+src/
+├── components/       # Composants React (Navbar, Hero, About, Skills, etc.)
+├── data/             # Donnees statiques (projets, experiences, skills, config)
+├── hooks/            # Hooks personnalises (pagination, section active)
+├── lib/              # Utilitaires
+├── pages/            # Pages (Home, 404)
+└── index.css         # Styles globaux et theme
+```
+
+## Deploiement
+
+Deploye sur **Vercel** avec deploiement automatique depuis la branche `main`.

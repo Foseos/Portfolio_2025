@@ -2,12 +2,12 @@ export const CONTACT_INFO = {
   email: "dachez.lucas@gmail.com",
   phone: "+33652609998",
   phoneDisplay: "+33 6 52 60 99 98",
-  location: "Vichy, France",
+  location: "France",
 };
 
 export const SOCIAL_LINKS = {
   github: "https://github.com/Foseos",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/lucas-dachez-a3b2903b2/",
   twitter: "",
   instagram: "",
 };
