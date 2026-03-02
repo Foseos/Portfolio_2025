@@ -99,7 +99,7 @@ export const projects = [
       "Plateforme complète de gestion RH en architecture micro-services : employés, congés, présences et reporting.",
     image: "/projects/project5.png",
     tags: ["FastAPI", "Python", "PostgreSQL", "C#", "Java", "Chart.js"],
-    demoUrl: "https://smarthr.onrender.com",
+    demoUrl: "https://smarthr-rqie.onrender.com/",
     githubUrl: "",
     detailedDescription:
       "Système de gestion des ressources humaines full-stack démontrant la maîtrise de 5 technologies en architecture micro-services. L'application couvre l'ensemble du cycle RH : gestion des employés, workflow d'approbation des congés, suivi des présences, dashboard analytique avec 6 KPI et 6 graphiques Chart.js, génération de fiches de paie, export PDF via une application desktop C# et notifications email via un micro-service Java Spring Boot.",
