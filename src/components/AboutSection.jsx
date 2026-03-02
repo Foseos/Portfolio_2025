@@ -3,9 +3,10 @@ import { useInView } from "framer-motion";
 import { Briefcase, Code, User, Download, Mail, ArrowRight, Shield, Code2, FolderGit2, CalendarDays } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SpotlightCard } from "./SpotlightCard";
+import { projects } from "../data/projects";
 
 const stats = [
-  { icon: FolderGit2, value: 4, suffix: "+", label: "Projets réalisés" },
+  { icon: FolderGit2, value: projects.length, suffix: "+", label: "Projets réalisés" },
   { icon: Code2, value: 4, suffix: "+", label: "Technologies maîtrisées" },
   { icon: CalendarDays, value: 1, suffix: "+", label: "Années d'expérience" },
 ];
