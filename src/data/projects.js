@@ -92,4 +92,29 @@ export const projects = [
     ],
     detailedImages: [],
   },
+  {
+    id: 5,
+    title: "SmartHR",
+    description:
+      "Plateforme complète de gestion RH en architecture micro-services : employés, congés, présences et reporting.",
+    image: "/projects/project5.png",
+    tags: ["FastAPI", "Python", "PostgreSQL", "C#", "Java", "Chart.js"],
+    demoUrl: "https://smarthr.onrender.com",
+    githubUrl: "",
+    detailedDescription:
+      "Système de gestion des ressources humaines full-stack démontrant la maîtrise de 5 technologies en architecture micro-services. L'application couvre l'ensemble du cycle RH : gestion des employés, workflow d'approbation des congés, suivi des présences, dashboard analytique avec 6 KPI et 6 graphiques Chart.js, génération de fiches de paie, export PDF via une application desktop C# et notifications email via un micro-service Java Spring Boot.",
+    features: [
+      "Authentification JWT avec 4 rôles (admin, RH, manager, employé)",
+      "CRUD complet des employés avec recherche, filtres et pagination",
+      "Dashboard analytique : 6 KPI avec tendances, 6 graphiques Chart.js et widgets d'actions rapides",
+      "Workflow d'approbation des congés avec soldes par employé et par année",
+      "Suivi des présences et pointage quotidien",
+      "Application desktop C# (.NET 8, WinForms) pour le reporting et l'export PDF (iText7)",
+      "Micro-service Java (Spring Boot) pour les notifications email",
+      "Génération automatique de fiches de paie et organigramme dynamique",
+      "Import/export CSV des données",
+      "Déploiement sur Render.com avec Docker Compose",
+    ],
+    detailedImages: [],
+  },
 ];
