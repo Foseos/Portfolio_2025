@@ -14,8 +14,8 @@ const ProjectsSection = lazy(() => import("../components/ProjectsSection").then(
 const ContactSection = lazy(() => import("../components/ContactSection").then(module => ({ default: module.ContactSection })));
 
 const SITE_URL = "https://www.portfoliodachez.fr";
-const SITE_TITLE = "Lucas Dachez | Portfolio";
-const SITE_DESCRIPTION = "Portfolio de Lucas Dachez, développeur web. Découvrez mes projets, mes compétences et mon expérience dans la création d'applications web modernes.";
+const SITE_TITLE = "Lucas Dachez | Alternant Chargé de Recrutement — Bac+3 RH";
+const SITE_DESCRIPTION = "Portfolio de Lucas Dachez, étudiant en Bac+3 Ressources Humaines au Groupe Alternance Montluçon. Disponible dès l'été 2026 — compétences en gestion administrative des formations, intégration des alternants, digitalisation des supports RH et RGPD.";
 
 export const Home = () => {
     return (
@@ -46,7 +46,7 @@ export const Home = () => {
           "@type": "Person",
           name: "Lucas Dachez",
           url: SITE_URL,
-          jobTitle: "Développeur Web",
+          jobTitle: "Alternant Chargé de Recrutement — Bac+3 Ressources Humaines",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Vichy",

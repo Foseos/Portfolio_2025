@@ -15,27 +15,27 @@ export const HeroSection = () => {
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in">Et si notre</span>
+            <span className="opacity-0 animate-fade-in">Et si votre</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
               {" "}
-              collaboration
+              alternant idéal
             </span>
             <span className="opacity-0 animate-fade-in-delay-2 flex flex-col sm:flex-row items-center justify-center gap-2">
               <span className="hidden sm:inline">{" "}</span>
-              <TextRotator 
-                texts={["faisait la différence", "créait de la valeur", "marquait les esprits"]} 
+              <TextRotator
+                texts={["gérait vos formations", "digitalisait vos process RH", "était déjà là ?"]}
                 className="text-primary font-bold min-h-[1.2em] relative"
               />
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Développeur web alliant expertise technique et vision stratégique pour transformer vos idées en solutions concrètes et performantes
+            Étudiant en Bac+3 Ressources Humaines — Groupe Alternance Montluçon | En recherche d'alternance à partir de septembre 2026
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              Découvrir mes projets
+              Découvrir mon profil
             </a>
           </div>
         </div>

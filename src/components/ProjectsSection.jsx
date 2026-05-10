@@ -12,7 +12,7 @@ const ITEMS_PER_PAGE = 6;
 export const ProjectsSection = () => {
   const [expandedId, setExpandedId] = useState(null);
 
-  const categories = ["Tous", "React", "Symfony", "Python"];
+  const categories = ["Tous", "RH", "Python"];
   const [activeCategory, setActiveCategory] = useState("Tous");
 
   const filteredProjects = projects.filter(
@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Une sélection de projets qui reflètent ma progression et mes compétences techniques.
+          Une sélection de projets qui reflètent mes compétences techniques et ma passion pour les outils RH.
         </motion.p>
 
         {/* Category Filters */}

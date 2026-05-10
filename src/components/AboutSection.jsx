@@ -1,14 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 import { useInView } from "framer-motion";
-import { Briefcase, Code, User, Download, Mail, ArrowRight, Shield, Code2, FolderGit2, CalendarDays } from "lucide-react";
+import { Users, Briefcase, User, Download, Mail, ArrowRight, FileCheck, Award, FolderGit2, CalendarDays } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SpotlightCard } from "./SpotlightCard";
 import { projects } from "../data/projects";
 
 const stats = [
   { icon: FolderGit2, value: projects.length, suffix: "+", label: "Projets réalisés" },
-  { icon: Code2, value: 4, suffix: "+", label: "Technologies maîtrisées" },
-  { icon: CalendarDays, value: 1, suffix: "+", label: "Années d'expérience" },
+  { icon: CalendarDays, value: 10, suffix: " mois", label: "Expérience RH" },
+  { icon: Award, value: 1, suffix: "", label: "Certification RGPD" },
 ];
 
 const AnimatedCounter = ({ target, suffix, isVisible }) => {
@@ -55,7 +55,7 @@ export const AboutSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              Disponible pour de nouvelles opportunités
+              Disponible dès l'été 2026 — Bac+3 RH
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center">
               À <span className="text-primary">propos</span> de moi
@@ -69,11 +69,10 @@ export const AboutSection = () => {
           <Reveal delay={200} className="space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
-                Développeur
+                Alternant en Ressources Humaines
               </h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Diplômé d'un BTS SIO spécialité SLAM en 2023, je possède de solides compétences en développement web et cybersécurité. 
-                Passionné par l'innovation, chaque projet est une opportunité de créer des solutions à fort impact.
+                Diplômé d'un BTS SIO en 2023, je me reconvertis en Ressources Humaines et prépare un Bac+3 RH au Groupe Alternance Montluçon (disponible dès l'été 2026). Mon CDD de 9 mois chez France Travail et mon stage Assistant RH chez Cottel m'ont donné des bases solides en suivi administratif, gestion documentaire et accompagnement de publics variés — directement transférables à la gestion des formations et l'intégration des alternants.
               </p>
             </div>
 
@@ -84,8 +83,7 @@ export const AboutSection = () => {
                   Ma motivation
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Passionné par les nouvelles technologies et l'innovation, je suis constamment en quête d'apprentissage. 
-                  Chaque projet est pour moi une opportunité de repousser mes limites et d'offrir la meilleure expérience à l'utilisateur.
+                  Organisé, curieux et à l'aise avec les outils numériques, je veux contribuer concrètement à la gestion des formations et à la digitalisation des supports RH. Mon background BTS SIO est un atout direct pour prendre en main rapidement une plateforme de gestion des connaissances et moderniser les process administratifs.
                 </p>
               </div>
 
@@ -95,17 +93,16 @@ export const AboutSection = () => {
                   Pourquoi me choisir ?
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ma polyvalence technique, ma curiosité naturelle et ma capacité d'adaptation me permettent de 
-                  m'intégrer rapidement. Je cherche à comprendre les enjeux métier pour proposer les solutions les plus durables.
+                  Autonome, force de proposition et habitué aux environnements exigeants (France Travail, ligne de production Ligier), je serai opérationnel rapidement. Mon profil technique me différencie : je ne subis pas les outils, je les maîtrise — et j'apporte de vraies initiatives sur la modernisation des process RH.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
               <a
-                href="Dachez Lucas.pdf"
+                href="CV_Dachez_RH.pdf"
                 className="cosmic-button flex items-center justify-center gap-2 group/btn"
-                download="Dachez Lucas.pdf"
+                download="CV_Dachez_RH.pdf"
               >
                 <Download size={18} className="group-hover/btn:-translate-y-1 transition-transform" />
                 Télécharger mon CV
@@ -143,12 +140,12 @@ export const AboutSection = () => {
                 <SpotlightCard className="p-4 group">
                   <div className="flex items-start gap-4">
                     <div className="p-2.5 rounded-xl bg-primary/10 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                      <Code className="h-5 w-5 text-primary" />
+                      <Users className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-base mb-1 group-hover:text-primary transition-colors">Développement Web</h4>
+                      <h4 className="font-semibold text-base mb-1 group-hover:text-primary transition-colors">Gestion administrative RH</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Création d'applications web modernes avec une UX soignée.
+                        Traitement des dossiers formations, gestion documentaire, suivi des offres de stage et d'alternance.
                       </p>
                     </div>
                   </div>
@@ -162,9 +159,9 @@ export const AboutSection = () => {
                       <User className="h-5 w-5 text-purple-500" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-base mb-1 group-hover:text-purple-500 transition-colors">Travail d'équipe</h4>
+                      <h4 className="font-semibold text-base mb-1 group-hover:text-purple-500 transition-colors">Intégration & Accompagnement</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Collaboration fluide avec méthodes agiles pour structurer la réussite.
+                        Recrutement, intégration et suivi des alternants et stagiaires tout au long de leur parcours en entreprise.
                       </p>
                     </div>
                   </div>
@@ -178,9 +175,9 @@ export const AboutSection = () => {
                       <Briefcase className="h-5 w-5 text-blue-500" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-base mb-1 group-hover:text-blue-500 transition-colors">Gestion de projet</h4>
+                      <h4 className="font-semibold text-base mb-1 group-hover:text-blue-500 transition-colors">Digitalisation & Outils RH</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Capacité à prioriser, estimer et délivrer dans les délais impartis.
+                        Digitalisation des supports RH, création de modes opératoires, maîtrise rapide des plateformes — BTS SIO comme fondation solide.
                       </p>
                     </div>
                   </div>
@@ -191,12 +188,12 @@ export const AboutSection = () => {
                 <SpotlightCard className="p-4 group">
                   <div className="flex items-start gap-4">
                     <div className="p-2.5 rounded-xl bg-emerald-500/10 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all duration-300">
-                      <Shield className="h-5 w-5 text-emerald-500" />
+                      <FileCheck className="h-5 w-5 text-emerald-500" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-base mb-1 group-hover:text-emerald-500 transition-colors">Cybersécurité</h4>
+                      <h4 className="font-semibold text-base mb-1 group-hover:text-emerald-500 transition-colors">RGPD & Conformité</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Application des bonnes pratiques pour concevoir des systèmes fiables.
+                        Certifié CNIL — respect des obligations légales liées au traitement des données candidats et à la confidentialité des processus RH.
                       </p>
                     </div>
                   </div>
