@@ -30,7 +30,7 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Étudiant en Bac+3 Ressources Humaines — Groupe Alternance Montluçon | En recherche d'alternance à partir de septembre 2026
+            Étudiant en Bac+3 Ressources Humaines à Groupe Alternance Montluçon | Disponible dès l'été 2026
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

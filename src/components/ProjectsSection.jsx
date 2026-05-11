@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Une sélection de projets qui reflètent mes compétences techniques et ma passion pour les outils RH.
+          Des outils concrets — gestion des formations, suivi des alternants, reporting — qui illustrent comment mon profil technique sert directement les équipes RH.
         </motion.p>
 
         {/* Category Filters */}

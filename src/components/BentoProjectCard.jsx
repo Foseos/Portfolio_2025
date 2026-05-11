@@ -43,7 +43,7 @@ export const BentoProjectCard = ({
   const allImages = [
     project.image,
     ...(project.detailedImages || []),
-  ];
+  ].filter(Boolean);
 
   const nextImage = (e) => {
     e.stopPropagation();
@@ -63,19 +63,26 @@ export const BentoProjectCard = ({
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* Image carousel */}
-          <div className="relative aspect-video lg:aspect-auto lg:min-h-[400px] overflow-hidden bg-black/5">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={currentImage}
-                src={allImages[currentImage]}
-                alt={`${project.title} - Image ${currentImage + 1}`}
-                className="w-full h-full object-cover"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            </AnimatePresence>
+          <div className="relative aspect-video lg:aspect-auto lg:min-h-[400px] overflow-hidden bg-secondary/30">
+            {allImages.length > 0 ? (
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImage}
+                  src={allImages[currentImage]}
+                  alt={`${project.title} - Image ${currentImage + 1}`}
+                  className="w-full h-full object-cover"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </AnimatePresence>
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center gap-3 text-muted-foreground">
+                <span className="text-4xl">📊</span>
+                <span className="text-sm font-medium">{project.title}</span>
+              </div>
+            )}
 
             {allImages.length > 1 && (
               <>
@@ -200,13 +207,22 @@ export const BentoProjectCard = ({
       onClick={() => onToggle(project.id)}
     >
       {/* Image */}
-      <div className="relative aspect-video overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <div className="relative aspect-video overflow-hidden bg-secondary/30">
+        {project.image ? (
+          <>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          </>
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-muted-foreground">
+            <span className="text-3xl">📊</span>
+            <span className="text-xs font-medium">{project.title}</span>
+          </div>
+        )}
 
         {/* Quick action icons */}
         <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
