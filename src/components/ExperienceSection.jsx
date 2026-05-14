@@ -28,11 +28,15 @@ export const ExperienceSection = () => {
             <Reveal key={exp.id} delay={index * 150} className="flex flex-col h-full">
               <SpotlightCard className="group rounded-2xl overflow-hidden shadow-sm flex flex-col h-full hover:border-primary/30">
                 <div className="h-48 overflow-hidden flex items-center justify-center bg-white dark:bg-white flex-shrink-0">
-                  <img
-                    src={exp.image}
-                    alt={exp.title}
-                    className="max-w-[80%] max-h-[80%] object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
+                  {exp.image ? (
+                    <img
+                      src={exp.image}
+                      alt={exp.title}
+                      className="max-w-[80%] max-h-[80%] object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <span className="text-5xl">{exp.emoji ?? "💼"}</span>
+                  )}
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow relative z-10">

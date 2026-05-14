@@ -68,5 +68,26 @@ export const experiences = [
     description: "Développement d'un script automatisé de vérification et validation des sauvegardes. Rédaction de documentation technique et de modes opératoires.",
     image: "/experience/Axereal.jpg",
     technologies: ["Bash", "Python", "SQL", "Documentation"]
+  },
+  {
+    id: 8,
+    title: "Employé polyvalent",
+    company: "Cottel",
+    period: "Juillet – Août 2022",
+    contractType: "Saisonnier",
+    description: "Travail polyvalent en entreprise durant l'été : manutention, support aux équipes et découverte du fonctionnement interne de la structure.",
+    image: "/experience/cottel.jpg",
+    technologies: []
+  },
+  {
+    id: 9,
+    title: "Ouvrier agricole saisonnier",
+    company: "Exploitations agricoles",
+    period: "Étés 2018 – 2023 (hors 2022)",
+    contractType: "Saisonnier",
+    description: "Travaux agricoles saisonniers chaque été durant 5 ans : récolte, manutention et travail en extérieur. Rigueur, endurance et esprit d'équipe dans des conditions exigeantes.",
+    image: "",
+    emoji: "🌾",
+    technologies: []
   }
 ];
